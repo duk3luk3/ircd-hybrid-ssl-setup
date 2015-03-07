@@ -1,0 +1,27 @@
+ircd-hybrid + stunnel for debian
+================================
+
+1. SSL Key and Certificates
+
+- if you want to use a self-signed CA for test purposes,
+  * Just run the script, it will generate everything correctly
+- if you have a CA but no certificate, place
+  * The CA certificate as ca/ca-root.pem
+  * The script will generate a server key and certificate signing request
+  * Get the cert signed and place it as key/ircd-cert.pem
+- if you already have a CA and a CA-signed certificate, place
+  * The CA certificate as ca/ca-root.pem
+  * The server certificate as key/ircd-cert.pem
+  * The server key as key/ircd.key
+
+2. IRC server
+
+- Set passwords in ircd.conf
+
+3. STunnel
+
+- Nothing to do here, but stunnel.conf can be customized
+
+4. Installation
+
+- Run the script
