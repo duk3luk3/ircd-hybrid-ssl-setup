@@ -1,10 +1,9 @@
-set -ev
+set -e
 
 echo "Installing OpenSSL, STunnel, Ircd-Hybrid packages"
+apt-get -qy install openssl stunnel ircd-hybrid
 
-apt-get install openssl stunnel ircd-hybrid
-
-echo "Checking SSL certs"
+echo "Checking SSL certs and keys"
 
 if [ -f "key/ircd.key" ]
 then
