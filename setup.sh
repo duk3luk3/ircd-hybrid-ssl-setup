@@ -1,7 +1,7 @@
 set -e
 
 echo "Installing OpenSSL, STunnel, Ircd-Hybrid packages"
-apt-get -qy install openssl stunnel ircd-hybrid
+apt-get -qy install openssl stunnel "ircd-hybrid=1:7.2.2.dfsg.2-10"
 
 echo "Checking SSL certs and keys"
 
