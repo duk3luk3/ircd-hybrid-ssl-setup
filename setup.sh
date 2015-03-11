@@ -40,7 +40,7 @@ else
 fi
 
 echo "Setting up ircd-hybrid"
-cp ircd.conf /etc/ircd.conf
+cp ircd.conf /etc/ircd-hybrid/ircd.conf
 
 service ircd-hybrid restart
 
