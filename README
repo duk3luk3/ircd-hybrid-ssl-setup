@@ -14,6 +14,11 @@ ircd-hybrid + stunnel for debian
   * The server certificate as key/ircd-cert.pem
   * The server key as key/ircd.key
 
+Note that issuer and subject cannot be the same, i.e. the identification data
+in CA and cert must be different, or openssl will always give a "self-signed cert"
+verification error.
+tl;dr give the certificate a CN that's different from the CA
+
 2. IRC server
 
 - Set passwords in ircd.conf
